@@ -78,6 +78,7 @@ nav {
 
     .banner-text p {
         font-size: 20px;
+        font-style: italic;
         margin: 5px 0 15px;
         animation: fadeIn 2.5s ease-in-out;
     }
@@ -101,7 +102,7 @@ nav {
     border-radius: 50%;
     background-color: rgba(255, 255, 255, 0.7);
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
-    padding: 10px;
+    padding: 5px;
     margin-bottom: 10px;
     transition: transform 0.3s ease;
 }
@@ -128,7 +129,7 @@ nav {
 
 /* About Section */
 .about {
-    text-align: center;
+    text-align: justify;
     padding: 40px 20px;
     background: #e8f5e9;
     color: #2e7d32;
@@ -227,6 +228,7 @@ nav {
     .trek-card a {
         /*color: #2e7d32;*/
         color: white;
+        text-shadow:90px;
         text-decoration: none;
     }
 
@@ -251,7 +253,8 @@ footer {
 /* Mobile Responsiveness */
 @media screen and (max-width: 768px) {
     .banner {
-        height: 100vh;
+        height: 60vh;
+        overflow: hidden;
     }
 
     .banner-text h1 {
@@ -459,24 +462,78 @@ footer {
 /* Accordion */
 .accordion {
     cursor: pointer;
-    padding: 15px;
+    padding: 15px 20px;
     width: 100%;
     text-align: left;
     outline: none;
     font-size: 16px;
-    transition: 0.4s;
+    transition: 0.4s ease-in-out;
     background-color: #e8f5e9;
     color: #2e7d32;
-    border: none;
+    border: 1px solid #cbd5e1;
     border-bottom: 1px solid #ccc;
     font-weight: bold;
     margin-top: 10px;
-    border-radius: 5px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.06);
 }
 
     .accordion:hover {
         background-color: #c8e6c9;
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
     }
+    .accordion summary {
+        cursor: pointer;
+        font-weight: 600;
+        font-size: 1.1rem;
+        color: #0f172a;
+        list-style: none;
+        outline: none;
+    }
+
+        .accordion summary::-webkit-details-marker {
+            display: none;
+        }
+
+    .accordion[open] summary {
+        margin-bottom: 10px;
+    }
+
+    .accordion ul {
+        padding-left: 20px;
+        margin: 10px 0;
+    }
+
+    .accordion li {
+        margin-bottom: 6px;
+        line-height: 1.6;
+    }
+
+    .accordion p {
+        margin-top: 10px;
+        line-height: 1.6;
+        color: #334155;
+    }
+/* Responsive styling */
+@media screen and (max-width: 768px) {
+    .info-section {
+        padding: 24px 12px;
+    }
+
+        .info-section h2 {
+            font-size: 1.5rem;
+        }
+
+    .accordion summary {
+        font-size: 1rem;
+    }
+
+    .accordion li,
+    .accordion p {
+        font-size: 0.95rem;
+    }
+}
+
 
 .panel {
     padding: 0 15px;
@@ -487,7 +544,7 @@ footer {
     transition: max-height 0.2s ease-out;
     background-color: white;
     /*display: none;*/
-}
+    }
     .panel p {
         margin: 10px 0;
     }
@@ -690,4 +747,24 @@ footer {
         flex-direction: column;
         align-items: center;
     }
+    .download-links {
+        text-align: center;
+        margin-top: 20px;
+    }
+
+        .download-links a {
+            display: inline-block;
+            margin: 8px 12px;
+            padding: 10px 16px;
+            background-color: #1e40af;
+            color: #ffffff;
+            text-decoration: none;
+            border-radius: 8px;
+            font-size: 0.95rem;
+            transition: background-color 0.3s ease;
+        }
+
+            .download-links a:hover {
+                background-color: #1e3a8a;
+            }
 }
