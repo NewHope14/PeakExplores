@@ -81,6 +81,7 @@ nav {
         font-style: italic;
         margin: 5px 0 15px;
         animation: fadeIn 2.5s ease-in-out;
+        /*color:darkseagreen*/
     }
 
 @keyframes fadeIn {
